@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizele.com</title>
+    <link rel="icon" href="Favicon/favicon for quiz site Quizele.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quizele</h1>
+
+        <div id="start-container">
+            <button class="start-btn" id="startQuiz" onclick="startQuiz()">Start Quiz</button>
+        </div>
+
+        <div id="quiz" style="display: none;">
+            <div id="question-container">
+                <p id="question"></p>  
+            </div>
+            <div id="answer-buttons">
+                <button class="answer-btn" onclick="checkAnswer('A')"></button>
+                <button class="answer-btn" onclick="checkAnswer('B')"></button>
+                <button class="answer-btn" onclick="checkAnswer('C')"></button>
+                <button class="answer-btn" onclick="checkAnswer('D')"></button>
+            </div>
+        </div>
+
+        <div id="result-container" style="display: none;">
+            <p id="result"></p>
+            <div class="button-container">
+                <button class="next-btn" id="nextQuestion" onclick="nextQuestion()">Next Question</button>
+                <button class="retake-btn" id="retakeQuiz" style="display: none;" onclick="retakeQuiz()">Retake The Quiz</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>
